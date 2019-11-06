@@ -1,41 +1,41 @@
-const todos = ['Write the letter', 'Eat some lunch', 'Run around the city']
+const todos = ["Apa kek", "Serah mau ngapain", "..."];
 
 // -----------------------------------------------------------------------------
 
 const showTodos = data => {
   for (let index = 0; index < data.length; index++) {
-    const item = data[index]
+    const item = data[index];
 
-    console.log(`[${index + 1}] ${item}`)
+    console.log(`[${index + 1}] ${item}`);
   }
-}
+};
 
 // -----------------------------------------------------------------------------
 
 const searchTodos = (data, textToSearch) => {
-  let newTodos = []
+  let newTodos = [];
 
   for (let index = 0; index < data.length; index++) {
-    const item = data[index]
+    const item = data[index];
 
-    const lowerCasedItem = item.toLowerCase()
-    const lowerCasedText = textToSearch.toLowerCase()
+    const lowerCasedItem = item.toLowerCase();
+    const lowerCasedText = textToSearch.toLowerCase();
 
     if (lowerCasedItem.includes(lowerCasedText)) {
-      newTodos.push(item)
+      newTodos.push(item);
     }
   }
 
-  return newTodos
-}
+  return newTodos;
+};
 
 // -----------------------------------------------------------------------------
 
-showTodos(todos)
+showTodos(todos);
 
 // -----------------------------------------------------------------------------
 
-const textInput = prompt('What todo do you want to search?')
-const foundTodos = searchTodos(todos, textInput)
+const textInput = prompt("What do you want to search?");
+const foundTodos = searchTodos(todos, textInput);
 
-showTodos(foundTodos)
+showTodos(foundTodos);
